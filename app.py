@@ -134,3 +134,14 @@ while True:
     for index, part in enumerate(item):
         print(index, ":", part["name"])
     item_number = int(input("What item do you want?"))
+    bill += item[item_number]["price"]
+    cart.append(item[item_number]["name"])
+    go_on = input("Do you wish to continue? Yes or no?").lower()
+    if go_on == "yes":
+        continue
+    elif go_on == "no":
+        print("You purchased: " + str(cart))
+        print("Total: " + str(bill))
+        break
+
+
